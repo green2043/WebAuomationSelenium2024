@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- Max value of verbose =10 and minimum =1, prefer 4 mostly so that will get
+meaning full o/p in console -->
+<!-- thread-count="3" parallel="tests"  USED FOR PARELLEL BROWSER TESTING, ALL
+WILL LUNCH PARALLELLY-->
+
+<suite name="TestNG Regression Suite" verbose="4" thread-count="3"
+	parallel="tests">
+
+
+	<!--	<test name="Open Cart Test">-->
+	<!--		<parameter name="url"
+	value="https://naveenautomationlabs.com/opencart/index.php?route=common/home"
+	/>-->
+	<!--		<parameter name="browser" value="chrome" />-->
+	<!--		<classes>-->
+	<!--			<class name="testNgSessions.SearchTestUsingDataProvider" />-->
+	<!--		</classes>-->
+	<!--	</test>-->
+
+	<test name="Opencart Login -ve test">
+		<parameter name="url"
+			value="https://naveenautomationlabs.com/opencart/index.php?route=account/login" />
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="testNgSessions.LoginNegativeTest" />
+		</classes>
+	</test>
+
+
+</suite>
